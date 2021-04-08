@@ -122,6 +122,7 @@ void Decrypting(block *TextInBlocks, const std::string &FileOut) {
     std::ofstream outputFile(FileOut);
     outputFile << DecryptedText;
     outputFile.close();
+    delete [] TextInBlocks;
 }
 
 int main(int argc, char *argv[]) {
